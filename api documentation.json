@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "8d1c41f3-49fd-4b19-9123-f05e52aeec01",
+		"name": "PlayPower",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17623278"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ruchi9839\",\r\n    \"password\":\"xyz123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/auth/register"
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"ruchi9839\",\r\n    \"password\":\"xyz123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/auth/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-jOef9pHv+Neql2WL+CmE0hYnvf8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Aug 2022 15:03:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"User created successfully\",\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ruchi9839\",\r\n    \"password\":\"xyz123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/auth/login"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"ruchi9839\",\r\n    \"password\":\"xyz123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/auth/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjYwMDU3NDg0fQ.DrWkggRTDvJhyBj9zspaao7BPGWHkumvg9FcsdlMmlc; Path=/; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-p58nLD0npFvA0mEtfTgQz3BcSxQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Aug 2022 15:04:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"username\": \"ruchi9839\",\n    \"createdAt\": \"2022-08-09T15:03:07.803Z\",\n    \"updatedAt\": \"2022-08-09T15:03:07.803Z\",\n    \"deletedAt\": null,\n    \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Survey",
+			"item": [
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"survey_name\":\"survey for student\",\r\n    \"que\":[\r\n        {\r\n            \"q\":\"Are you excited?\",\r\n            \"a\":\"1\"\r\n        }, {\r\n            \"q\":\"You should brush your teeth\",\r\n            \"a\":\"1\"\r\n        }, {\r\n            \"q\":\"You should eat non helthy food\",\r\n            \"a\":\"0\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/survey/5"
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjYwMDU3NDg0fQ.DrWkggRTDvJhyBj9zspaao7BPGWHkumvg9FcsdlMmlc; Path=/; HttpOnly",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"survey_name\":\"student survey\",\r\n    \"que\":[\r\n        {\r\n            \"q\":\"Are you excited?\",\r\n            \"a\":\"1\"\r\n        }, {\r\n            \"q\":\"You should brush your teeth\",\r\n            \"a\":\"1\"\r\n        }, {\r\n            \"q\":\"You should eat non helthy food\",\r\n            \"a\":\"0\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/survey"
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1335"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"537-fPN3H58fZqkryyORs5Uc3vZT0hg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Aug 2022 17:26:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"status\": 403,\n    \"message\": \"user : 2 + Please login into your account first this is account of undefined \",\n    \"stack\": \"Error: user : 2 + Please login into your account first this is account of undefined \\n    at createError (D:\\\\_study\\\\project\\\\playpower\\\\assesment\\\\backend\\\\src\\\\utils\\\\error.js:2:15)\\n    at D:\\\\_study\\\\project\\\\playpower\\\\assesment\\\\backend\\\\src\\\\utils\\\\verifyToken.js:21:19\\n    at D:\\\\_study\\\\project\\\\playpower\\\\assesment\\\\backend\\\\src\\\\utils\\\\verifyToken.js:11:5\\n    at D:\\\\_study\\\\project\\\\playpower\\\\assesment\\\\backend\\\\node_modules\\\\jsonwebtoken\\\\verify.js:223:12\\n    at getSecret (D:\\\\_study\\\\project\\\\playpower\\\\assesment\\\\backend\\\\node_modules\\\\jsonwebtoken\\\\verify.js:90:14)\\n    at Object.module.exports [as verify] (D:\\\\_study\\\\project\\\\playpower\\\\assesment\\\\backend\\\\node_modules\\\\jsonwebtoken\\\\verify.js:94:10)\\n    at verifyToken (D:\\\\_study\\\\project\\\\playpower\\\\assesment\\\\backend\\\\src\\\\utils\\\\verifyToken.js:8:7)\\n    at verifyUser (D:\\\\_study\\\\project\\\\playpower\\\\assesment\\\\backend\\\\src\\\\utils\\\\verifyToken.js:16:3)\\n    at Layer.handle [as handle_request] (D:\\\\_study\\\\project\\\\playpower\\\\assesment\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (D:\\\\_study\\\\project\\\\playpower\\\\assesment\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:144:13)\"\n}"
+						}
+					]
+				},
+				{
+					"name": "take",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:5000/survey/8"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "582"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"246-PoPvnKLDLqAIAUAy4zzCO/lTe/s\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Aug 2022 17:36:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"survey_name\": \"student survey\",\n    \"questions\": [\n        {\n            \"id\": 10,\n            \"question\": \"Are you excited?\",\n            \"answer\": true,\n            \"survey_id\": \"8\",\n            \"createdAt\": \"2022-08-09T17:32:40.605Z\",\n            \"updatedAt\": \"2022-08-09T17:32:40.605Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": 11,\n            \"question\": \"You should brush your teeth\",\n            \"answer\": true,\n            \"survey_id\": \"8\",\n            \"createdAt\": \"2022-08-09T17:32:40.645Z\",\n            \"updatedAt\": \"2022-08-09T17:32:40.645Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": 12,\n            \"question\": \"You should eat non helthy food\",\n            \"answer\": false,\n            \"survey_id\": \"8\",\n            \"createdAt\": \"2022-08-09T17:32:40.681Z\",\n            \"updatedAt\": \"2022-08-09T17:32:40.681Z\",\n            \"deletedAt\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "result",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userRes\":[\"0\" , \"0\" , \"0\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/survey/5"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-TvTj8usJrDxZtqNiZjEKw7C3VQU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Aug 2022 17:03:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"you got 2 out of 3\""
+						}
+					]
+				}
+			]
+		}
+	]
+}
